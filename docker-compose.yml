@@ -1,14 +1,7 @@
-version: '3.9'
-name: mysql_local
+name: maria_local
 
 services:
   db:
-    env_file:
-      - path: ./.env
-        required: true # default
-      - path: ./.env.local
-        required: false
-
     image: mariadb:${MARIADB_VERSION}
     restart: always
 
